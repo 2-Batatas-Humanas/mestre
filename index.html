@@ -3,10 +3,16 @@
     <head>
         <meta charset="utf-8">
         <title>Mestre</title>
-        <link type="text/css" rel="stylesheet" href="Style/mestre.css">
-        <script src="Script/mestre.js"></script>
+        <link type="text/css" rel="stylesheet" href="Style/index.css">
+        <script src="Script/index.js"></script>
+        <link type="image/png" rel="icon" href="Images/favicon.png">
     </head>
     <body>
-        <h1>Isso é um teste</h1>
+        <h1>Bem-vindo, Mestre!</h1>
+        <label for="addCharacter">Adicione(ou remova) um personagem: </label>
+        <img onclick="addCharacter()" src="Images/plusSign.png" width="30px">
+        <img onclick="removeCharacter()" src="Images/minusSign.jpg" width="30px">
+        <div id="charactersSpace"></div>
+        <button onclick="loadCharacters()">Pronto</button>
     </body>
 </html>
