@@ -2,6 +2,7 @@ charactersNum = 0;
 
 function checkLocalStorage(){
     characNum = localStorage.getItem("numberOfCharacters");
+    console.log(characNum);
     if(characNum){
         for(let i = 0; i < parseInt(characNum); i++){
             addCharacter();
