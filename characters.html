@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <title>Personagem</title>
+        <link type="text/css" rel="stylesheet" href="Style/characters.css">
+        <script src="Script/magias.js"></script>
+        <script src="Script/funcoesAuxiliares.js"></script>
+        <script src="Script/trilhas.js"></script>
+        <script src="Script/ancestralidades.js"></script>
+        <script src="Script/characters.js"></script>
+        <link rel="icon" type="image/png" href="Images/favicon.png">
+    </head>
+    <body>
+        <div id="charactersButtons"></div>
+        <script>loadCharactersNames()</script>
+        <div id="mainDiv">
+            <div id="profile">
+                <div id="photoHolder">
+                    <div id="photo">
+                        <img id="characterImage" width="160" alt="Imagem do Personagem">
+                    </div>
+                    <label>Vida atual:</label>
+                    <meter id="healthNow" min="0"></meter>
+                    <output id="numberHealthNow"></output>
+                </div>
+                <div id="text">
+                    <p id="name"></p>
+                    <p>Nível: <span id="level"></span><button id="addLevel" onclick="addLevel()">+</button></p>
+                    <p id="ancestry"></p>
+                    <p id="novicePath"></p>
+                    <p id="expertPath"></p>
+                    <p id="masterPath"></p>
+                </div>
+            </div>
+            <div id="mostImportantCharacteristics">
+                <div id="insanityDiv">
+                    <p>Insanidade</p>
+                    <input oninput="changeInsanity(this.value)" id="insanity" type="number" min="0">
+                </div>
+                <div id="corruptionDiv">
+                    <p>Corrupção</p>
+                    <input oninput="changeCorruption(this.value)" id="corruption" type="number" min="0">
+                </div>
+                <div id="powerDiv">
+                    <p>Poder</p>
+                    <input id="power" type="number" min="0" readonly>
+                </div>
+                <div id="defenseDiv">
+                    <p>Defesa</p>
+                    <input oninput="changeDefense(this.value)" id="defense" type="number" min="0">
+                </div>
+                <div id="damageDiv">
+                    <p>Dano</p>
+                    <input oninput="changeDamage(this.value)" id="damage" type="number" min="0">
+                </div>
+                <div id="healingRateDiv">
+                    <p>Taxa de Cura</p>
+                    <input id="healingRate" type="number" min="0" readonly>
+                </div>
+            </div>
+            <div id="extras">
+                <button onclick="loadInfo()">Informações Gerais</button>
+                <div id="info"></div>
+                <button onclick="loadTalents()">Talentos</button>
+                <div id="talents"></div>
+                <button onclick="loadEquipment()">Equipamentos</button>
+                <div id="equipments"></div>
+                <button onclick="loadSpells()">Magias</button>
+                <div id="spells"></div>
+            </div>
+            <div id="otherCharacteristics">
+                <p id="strength">Força: </p>
+                <p id="agility">Agilidade: </p>
+                <p id="intellect">Intelecto: </p>
+                <p id="will">Vontade: </p>
+                <p id="perception">Percepção: </p>
+                <p id="size">Tamanho: </p>
+                <p id="speed">Deslocamento: </p>
+                <p id="health">Saúde: </p>
+            </div>
+        </div>
+        <script>loadCharacterData()</script>
+    </body>
+</html>
