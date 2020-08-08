@@ -3,7 +3,7 @@ charactersNum = 0;
 function checkLocalStorage(){
     characNum = localStorage.getItem("numberOfCharacters");
     if(characNum){
-        for(let i = 0; i < characNum; i++){
+        for(let i = 0; i < parseInt(characNum); i++){
             addCharacter();
             let input = document.querySelector("character" + i);
             input.value = localStorage.getItem("character" + i);
