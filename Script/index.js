@@ -1,5 +1,16 @@
 charactersNum = 0;
 
+function checkLocalStorage(){
+    characNum = localStorage.getItem("numberOfCharacters");
+    if(characNum){
+        for(let i = 0; i < characNum; i++){
+            addCharacter();
+            let input = document.querySelector("character" + i);
+            input.value = localStorage.getItem("character" + i);
+        }
+    }
+}
+
 function addCharacter(){
     let div = document.querySelector("#charactersSpace");
 
